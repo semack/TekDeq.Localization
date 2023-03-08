@@ -1,9 +1,8 @@
-using System.ComponentModel;
 using System.Globalization;
 
 namespace TekDeq.Localization.Interfaces;
 
-public interface ILocalizer 
+public interface ILocalizer
 {
     public string this[string key] { get; }
     public CultureInfo CurrentCulture { get; set; }

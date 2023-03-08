@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using TekDeq.Localization.Options;
 using TekDeq.Localization.Providers.Interfaces;
@@ -32,10 +31,10 @@ public abstract class LocalizationProviderBase : ILocalizationProvider
 
     protected virtual void ValidateOptions(LocalizationOptions options)
     {
-        if (!options.Cultures.Any()) throw new ValidationException("The culture list is empty.");
+        if (!options.Cultures.Any()) throw new ArgumentException("The culture list is empty.");
 
         if (options.Cultures.All(x => x.IetfLanguageTag != options.DefaultCulture.IetfLanguageTag))
-            throw new ValidationException(
+            throw new ArgumentException(
                 $"The default culture {options.DefaultCulture.IetfLanguageTag} is not present in the culture list.");
     }
 

@@ -25,17 +25,24 @@ public abstract class JsonLocalizationProvider : LocalizationProviderBase
             var json = streamReader.ReadToEnd();
             return JsonSerializer.Deserialize<Dictionary<string, string>>(json)!;
         }
-        else
-        {
-            throw new InvalidDataException($"Cannot load asset for culture {culture.IetfLanguageTag}");
-        }
+
+        throw new InvalidDataException($"Cannot load asset for culture {culture.IetfLanguageTag}");
     }
 
     protected override void ChangeCulture(CultureInfo culture)
     {
+        // check culture before changing
         if (AvailableCultures.All(c => c.IetfLanguageTag != culture.IetfLanguageTag))
             culture = Options.DefaultCulture;
+        
+        // check if fallback loaded
+        if (!_fallbackDictionary.Any())
+            _fallbackDictionary = GetDictionary(Options.DefaultCulture);
+        
+        // load selected
         _activeDictionary = GetDictionary(culture);
+        
+        // inherit base method
         base.ChangeCulture(culture);
     }
 
@@ -45,15 +52,10 @@ public abstract class JsonLocalizationProvider : LocalizationProviderBase
 
         // extract data from active dictionary
         if (!_activeDictionary.TryGetValue(key, out resource))
-        {
-            // try to extract data from default dictionary if active fails
-            if (!_fallbackDictionary.Any())
-                _fallbackDictionary = GetDictionary(Options.DefaultCulture);
-            _fallbackDictionary.TryGetValue(key, out resource);
-        }
-        
-        return !string.IsNullOrEmpty(resource) 
-            ? resource.Replace("\\n", "\n") 
+            _ = _fallbackDictionary.TryGetValue(key, out resource);
+
+        return !string.IsNullOrEmpty(resource)
+            ? resource.Replace("\\n", "\n")
             : $"{CurrentCulture.IetfLanguageTag}:{key}"; // Return missing data if fallback fails
     }
 }

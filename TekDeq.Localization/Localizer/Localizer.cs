@@ -33,7 +33,9 @@ public sealed class Localizer : ILocalizer, INotifyPropertyChanged
         }
     }
 
-    public void Invalidate()
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    private void Invalidate()
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(CurrentCulture)));
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(IndexerName));
@@ -45,6 +47,4 @@ public sealed class Localizer : ILocalizer, INotifyPropertyChanged
         Instance = new Localizer(provider);
         return Instance;
     }
-
-    public event PropertyChangedEventHandler? PropertyChanged;
 }

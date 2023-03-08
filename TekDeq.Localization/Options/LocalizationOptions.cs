@@ -4,7 +4,7 @@ namespace TekDeq.Localization.Options;
 
 public class LocalizationOptions
 {
-    public LocalizationOptions(IEnumerable<CultureInfo> cultures, 
+    public LocalizationOptions(IEnumerable<CultureInfo> cultures,
         CultureInfo defaultCulture, CultureInfo currentCulture)
     {
         Cultures = cultures;
