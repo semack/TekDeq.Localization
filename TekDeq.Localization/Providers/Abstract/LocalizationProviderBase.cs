@@ -27,7 +27,7 @@ public abstract class LocalizationProviderBase : ILocalizationProvider
 
     public IEnumerable<CultureInfo> AvailableCultures => Options.Cultures;
 
-    protected abstract bool LoadSingleAsset(CultureInfo culture, out Stream? stream);
+    protected abstract Stream? GetResourceStream(CultureInfo culture);
 
     protected virtual void ValidateOptions(LocalizationOptions options)
     {

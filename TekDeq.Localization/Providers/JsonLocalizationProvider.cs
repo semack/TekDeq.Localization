@@ -15,11 +15,12 @@ public abstract class JsonLocalizationProvider : LocalizationProviderBase
     {
     }
 
-
     private Dictionary<string, string> GetDictionary(CultureInfo culture)
     {
         // load strings
-        if (LoadSingleAsset(culture, out var stream) && stream != null)
+        using var stream = GetResourceStream(culture);
+
+        if (stream != null)
         {
             using var streamReader = new StreamReader(stream, Encoding.UTF8);
             var json = streamReader.ReadToEnd();

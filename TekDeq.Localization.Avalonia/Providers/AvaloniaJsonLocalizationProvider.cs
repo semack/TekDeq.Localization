@@ -36,18 +36,14 @@ public class AvaloniaJsonLocalizationProvider : JsonLocalizationProvider
         });
     }
 
-    protected override bool LoadSingleAsset(CultureInfo culture, out Stream? stream)
+    protected override Stream? GetResourceStream(CultureInfo culture)
     {
         var uri = GetAssetUri(culture);
         var assets = AvaloniaLocator.Current.GetRequiredService<IAssetLoader>();
 
         if (assets.Exists(uri))
-        {
-            stream = assets.Open(uri);
-            return true;
-        }
+            return assets.Open(uri);
 
-        stream = null;
-        return false;
+        return null;
     }
 }
