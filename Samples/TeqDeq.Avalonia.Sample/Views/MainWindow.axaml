@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:TeqDeq.Avalonia.Sample.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i18n="clr-namespace:TekDeq.Localization.Avalonia.Extensions;assembly=TekDeq.Localization.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TeqDeq.Avalonia.Sample.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="TeqDeq.Avalonia.Sample">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+    <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+        <Label Content="{i18n:Localize Language}" />
+        <ComboBox Items="{Binding AvailableCultures}"
+                  SelectedItem="{Binding CurrentCulture}">
+        </ComboBox>
+        <TextBlock Text="{i18n:Localize Model}" />
+        <TextBlock Text="{Binding ViewModelDIText}" />
+        <TextBlock Text="{i18n:Localize MissingEntry}" />
+        <TextBlock Text="{i18n:Localize RealMissingEntry}" />
+    </StackPanel>
+</Window>
