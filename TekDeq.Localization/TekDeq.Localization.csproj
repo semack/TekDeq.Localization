@@ -10,11 +10,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Extensions" />
+        <Folder Include="Extensions"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="System.Text.Json" Version="7.0.2" />
+        <PackageReference Include="System.Text.Json" Version="7.0.2"/>
     </ItemGroup>
 
 </Project>

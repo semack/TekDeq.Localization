@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Input;
 using ReactiveUI;
 using TekDeq.Localization.Interfaces;
 
@@ -8,11 +7,16 @@ namespace TeqDeq.Avalonia.Sample.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {
+    public MainWindowViewModel(ILocalizer localizer) : base(localizer)
+    {
+    }
+
     // public ICommand ChangeLanguageCommand = 
     public string Greeting => Localizer["View"];
-    public IEnumerable<string> AvailableCultures => Localizer.AvailableCultures.Select((x => x.IetfLanguageTag));
+    public IEnumerable<string> AvailableCultures => Localizer.AvailableCultures.Select(x => x.IetfLanguageTag);
 
     public string ViewModelDIText => Localizer["ViewModel"];
+
     public string CurrentCulture
     {
         get => Localizer.CurrentCulture.IetfLanguageTag;
@@ -22,9 +26,5 @@ public class MainWindowViewModel : ViewModelBase
             this.RaisePropertyChanged();
             this.RaisePropertyChanged(nameof(ViewModelDIText));
         }
-    }
-
-    public MainWindowViewModel(ILocalizer localizer) : base(localizer)
-    {
     }
 }

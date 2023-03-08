@@ -34,14 +34,14 @@ public abstract class JsonLocalizationProvider : LocalizationProviderBase
         // check culture before changing
         if (AvailableCultures.All(c => c.IetfLanguageTag != culture.IetfLanguageTag))
             culture = Options.DefaultCulture;
-        
+
         // check if fallback loaded
         if (!_fallbackDictionary.Any())
             _fallbackDictionary = GetDictionary(Options.DefaultCulture);
-        
+
         // load selected
         _activeDictionary = GetDictionary(culture);
-        
+
         // inherit base method
         base.ChangeCulture(culture);
     }

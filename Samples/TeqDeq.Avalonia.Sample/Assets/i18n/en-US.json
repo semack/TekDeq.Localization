@@ -1,6 +1,6 @@
 {
-   "Language": "Language",
-   "Model": "Model: Hello world!",
-   "ViewModel": "ViewModel: It works also!",
-   "MissingEntry": "Fallback Entry: It's Present!"
+  "Language": "Language",
+  "Model": "Model: Hello world!",
+  "ViewModel": "ViewModel: It works also!",
+  "MissingEntry": "Fallback Entry: It's Present!"
 }

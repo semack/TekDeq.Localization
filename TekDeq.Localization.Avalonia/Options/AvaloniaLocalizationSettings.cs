@@ -1,7 +1,7 @@
 using System.Globalization;
 using TekDeq.Localization.Options;
 
-namespace TekDeq.Localization.Avalonia.Settings;
+namespace TekDeq.Localization.Avalonia.Options;
 
 public class AvaloniaLocalizationOptions : LocalizationOptions
 {

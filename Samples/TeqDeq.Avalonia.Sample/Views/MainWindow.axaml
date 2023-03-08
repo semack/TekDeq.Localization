@@ -20,8 +20,7 @@
         VerticalAlignment="Center">
         <Label Content="{i18n:Localize Language}" />
         <ComboBox Items="{Binding AvailableCultures}"
-                  SelectedItem="{Binding CurrentCulture}">
-        </ComboBox>
+                  SelectedItem="{Binding CurrentCulture}" />
         <TextBlock Text="{i18n:Localize Model}" />
         <TextBlock Text="{Binding ViewModelDIText}" />
         <TextBlock Text="{i18n:Localize MissingEntry}" />

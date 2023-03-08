@@ -5,10 +5,10 @@ namespace TeqDeq.Avalonia.Sample.ViewModels;
 
 public abstract class ViewModelBase : ReactiveObject
 {
-    protected ILocalizer Localizer { get; }
-
     protected ViewModelBase(ILocalizer localizer)
     {
         Localizer = localizer;
     }
+
+    protected ILocalizer Localizer { get; }
 }

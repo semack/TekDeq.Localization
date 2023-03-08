@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using Avalonia;
 using Avalonia.Platform;
-using TekDeq.Localization.Avalonia.Settings;
+using TekDeq.Localization.Avalonia.Options;
 using TekDeq.Localization.Options;
 using TekDeq.Localization.Providers;
 
