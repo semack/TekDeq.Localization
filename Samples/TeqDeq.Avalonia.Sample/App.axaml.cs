@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Globalization;
-using System.Threading;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
@@ -9,6 +6,9 @@ using Microsoft.Extensions.Hosting;
 using ReactiveUI;
 using Splat;
 using Splat.Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using TekDeq.Localization.Avalonia.Options;
 using TekDeq.Localization.Avalonia.Providers;
 using TekDeq.Localization.DependencyInjection.Extensions;
@@ -60,7 +60,6 @@ public class App : Application
                     return options;
                 });
             }).Build();
-
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
