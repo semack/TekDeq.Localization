@@ -43,13 +43,19 @@ public class App : Application
                 services.AddLocalization<AvaloniaJsonLocalizationProvider>(() =>
                 {
                     var options = new AvaloniaLocalizationOptions(
+                        // cultures support localization
                         new List<CultureInfo>
                         {
                             new("en-US"),
                             new("uk-UA")
                         },
+                        // defaultCulture, it uses for setting if currentCulture is not in cultures list
+                        // and as fallback culture mor missing localization entries.
                         new CultureInfo("en-US"),
+                        // currentCulture sets when infrastructure loads,
+                        // could be received from app settings or so.
                         Thread.CurrentThread.CurrentCulture,
+                        // path to assets with json files of localization.
                         $"{typeof(App).Namespace}/Assets/i18n");
                     return options;
                 });

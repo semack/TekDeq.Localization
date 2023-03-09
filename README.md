@@ -20,7 +20,7 @@ Install-Package TekDeq.Localization.DependencyInjection
 ```
 
 - Localization provider and extensions for [Avalonia](https://avaloniaui.net/) [![Nuget](https://img.shields.io/nuget/v/Localization.Avalonia)](https://www.nuget.org/packages/Localization.Avalonia/)
-  [![Nuget](https://img.shields.io/nuget/dt/Localization.Avalonia)](https://www.nuget.org/Localization.Avalonia/) (Now it supports Json dictionaries only).
+  [![Nuget](https://img.shields.io/nuget/dt/Localization.Avalonia)](https://www.nuget.org/Localization.Avalonia/)<br /> (Now it supports Json dictionaries only).
 ```
 Install-Package TekDeq.Localization.Avalonia
 ```
@@ -30,17 +30,17 @@ To create additional Localization Providers, please look at
 [ILocalizationProvider](https://github.com/semack/TekDeq.Localization/blob/master/TekDeq.Localization.Core/Providers/Interfaces/ILocalizationProvider.cs)
 and 
 [LocalizationProviderBase](https://github.com/semack/TekDeq.Localization/blob/master/TekDeq.Localization.Core/Providers/Abstract/LocalizationProviderBase.cs)
-abstraction. As an example of usage please look at 
+abstractions. As an example of usage please look at 
 [JsonLocalizationProvider](https://github.com/semack/TekDeq.Localization/blob/master/TekDeq.Localization.Core/Providers/JsonLocalizationProvider.cs) 
 and 
 [AvaloniaJsonLocalizationProvider](https://github.com/semack/TekDeq.Localization/blob/master/TekDeq.Localization.Avalonia/Providers/AvaloniaJsonLocalizationProvider.cs)
 implementation.
-If you are using dependency injection in your project an example of the usage could be found in 
+If you are using dependency injection in your project, an example of the usage could be found in 
 [App.axaml.cs](https://github.com/semack/TekDeq.Localization/blob/master/Samples/TeqDeq.Avalonia.Sample/App.axaml.cs)
 of the demo project.
 
 ```csharp
-   public override void OnFrameworkInitializationCompleted()
+    public override void OnFrameworkInitializationCompleted()
     {
         var host = Host.CreateDefaultBuilder()
             .ConfigureServices((context, services) =>
@@ -59,13 +59,19 @@ of the demo project.
                 services.AddLocalization<AvaloniaJsonLocalizationProvider>(() =>
                 {
                     var options = new AvaloniaLocalizationOptions(
+                        // cultures support localization
                         new List<CultureInfo>
                         {
                             new("en-US"),
                             new("uk-UA")
                         },
+                        // defaultCulture, it uses for setting if currentCulture is not in cultures list
+                        // and as fallback culture mor missing localization entries.
                         new CultureInfo("en-US"),
+                        // currentCulture sets when infrastructure loads,
+                        // could be received from app settings or so.
                         Thread.CurrentThread.CurrentCulture,
+                        // path to assets with json files of localization.
                         $"{typeof(App).Namespace}/Assets/i18n");
                     return options;
                 });
@@ -94,7 +100,7 @@ markup extension, it needs the namespace to be added to markup.
 ...
 >
 ```
-and after this it could be used in the controls
+and after this it could be used for control localization,
 ```xamlml
     <StackPanel
 ...
@@ -104,10 +110,12 @@ and after this it could be used in the controls
 ```
 
 ## AvaloniaUI demo project
-The demo project included to the repository, just open and run it in Visual Studio.
+The [DEMO](https://github.com/semack/TekDeq.Localization/tree/master/Samples/TeqDeq.Avalonia.Sample)
+project included to the repository, just open and run it in Visual Studio.
 
 ## License
-This project is licensed under the terms of the MIT license.
+This project is licensed under the terms of the 
+[MIT license](https://github.com/semack/TekDeq.Localization/blob/master/LICENSE.md).
 
 ## Contribute
 Contributions are welcome. Just open an Issue or submit a PR. 
