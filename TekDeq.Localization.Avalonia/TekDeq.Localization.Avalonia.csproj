@@ -8,7 +8,7 @@
         <LangVersion>10</LangVersion>
         <Description>Avalonia Localization library</Description>
         <PackageProjectUrl>https://github.com/semack/TekDeq.Localization</PackageProjectUrl>
-        <License type="file">https://github.com/semack/TekDeq.Localization/blob/master/LICENSE.md</License>
+        <license type="file">https://github.com/semack/TekDeq.Localization/blob/master/LICENSE.md</license>
         <RepositoryUrl>https://github.com/semack/TekDeq.Localization</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
