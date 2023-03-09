@@ -91,7 +91,7 @@ of the demo project.
 ```
 For start using the markup localization in Avalonia by 
 [Localize](https://github.com/semack/TekDeq.Localization/blob/master/TekDeq.Localization.Avalonia/Extensions/LocalizeExtension.cs) 
-markup extension, it needs the namespace to be added to markup.
+markup extension, it needs the namespace to be added to the markup.
 
 ```xamlml
 <Window xmlns="https://github.com/avaloniaui"
@@ -100,7 +100,7 @@ markup extension, it needs the namespace to be added to markup.
 ...
 >
 ```
-and after this it could be used for control localization,
+After this it could be used for localization of UI
 ```xamlml
     <StackPanel
 ...
@@ -118,7 +118,7 @@ This project is licensed under the terms of the
 [MIT license](https://github.com/semack/TekDeq.Localization/blob/master/LICENSE.md).
 
 ## Contribute
-Contributions are welcome. Just open an Issue or submit a PR. 
+Contributions are welcome. Just open an Issue or submit a new [PR](https://github.com/semack/TekDeq.Localization/pulls). 
 
 ## Contact
 You can reach me via my [email](mailto://semack@gmail.com).
