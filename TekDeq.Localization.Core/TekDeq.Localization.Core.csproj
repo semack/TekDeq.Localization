@@ -16,16 +16,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Extensions" />
-    </ItemGroup>
-
-    <ItemGroup>
         <PackageReference Include="System.Text.Json" Version="7.0.2" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="..\README.md" Pack="true" PackagePath="\"/>
-        <None Include="..\LICENSE.md" Pack="true" PackagePath="\"/>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\LICENSE.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
 </Project>
