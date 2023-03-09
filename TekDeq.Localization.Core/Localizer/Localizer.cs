@@ -1,9 +1,9 @@
 using System.ComponentModel;
 using System.Globalization;
-using TekDeq.Localization.Interfaces;
-using TekDeq.Localization.Providers.Interfaces;
+using TekDeq.Localization.Core.Interfaces;
+using TekDeq.Localization.Core.Providers.Interfaces;
 
-namespace TekDeq.Localization;
+namespace TekDeq.Localization.Core;
 
 public sealed class Localizer : ILocalizer, INotifyPropertyChanged
 {

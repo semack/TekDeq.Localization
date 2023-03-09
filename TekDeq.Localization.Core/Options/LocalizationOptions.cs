@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace TekDeq.Localization.Options;
+namespace TekDeq.Localization.Core.Options;
 
 public class LocalizationOptions
 {

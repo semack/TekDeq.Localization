@@ -1,8 +1,9 @@
 using Microsoft.Extensions.DependencyInjection;
-using TekDeq.Localization.Interfaces;
-using TekDeq.Localization.Options;
-using TekDeq.Localization.Providers.Abstract;
-using TekDeq.Localization.Providers.Interfaces;
+using TekDeq.Localization.Core;
+using TekDeq.Localization.Core.Interfaces;
+using TekDeq.Localization.Core.Options;
+using TekDeq.Localization.Core.Providers.Abstract;
+using TekDeq.Localization.Core.Providers.Interfaces;
 
 namespace TekDeq.Localization.DependencyInjection.Extensions;
 

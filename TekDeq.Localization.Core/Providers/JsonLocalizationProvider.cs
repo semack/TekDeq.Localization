@@ -1,10 +1,10 @@
 using System.Globalization;
 using System.Text;
 using System.Text.Json;
-using TekDeq.Localization.Options;
-using TekDeq.Localization.Providers.Abstract;
+using TekDeq.Localization.Core.Options;
+using TekDeq.Localization.Core.Providers.Abstract;
 
-namespace TekDeq.Localization.Providers;
+namespace TekDeq.Localization.Core.Providers;
 
 public abstract class JsonLocalizationProvider : LocalizationProviderBase
 {

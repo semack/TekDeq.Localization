@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekDeq.Localization", "TekDeq.Localization\TekDeq.Localization.csproj", "{35E1DD89-A6CF-4553-8DD1-027EA0C08EA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekDeq.Localization.Core", "TekDeq.Localization.Core\TekDeq.Localization.Core.csproj", "{35E1DD89-A6CF-4553-8DD1-027EA0C08EA3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekDeq.Localization.DependencyInjection", "TekDeq.Localization.DependencyInjection\TekDeq.Localization.DependencyInjection.csproj", "{406EDC4F-4103-47C7-A870-E0F5A76BB931}"
 EndProject
@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeqDeq.Avalonia.Sample", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{B192E09A-8F30-4AD5-AA7A-EE4ABC45CBC7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{CDC56CFE-848B-44AD-98B8-7637578D3F47}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{CDC56CFE-848B-44AD-98B8-7637578D3F47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

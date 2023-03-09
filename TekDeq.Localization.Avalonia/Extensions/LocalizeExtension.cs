@@ -1,6 +1,7 @@
 using Avalonia.Data;
 using Avalonia.Markup.Xaml;
 using Avalonia.Markup.Xaml.MarkupExtensions;
+using TekDeq.Localization.Core;
 
 namespace TekDeq.Localization.Avalonia.Extensions;
 

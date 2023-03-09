@@ -1,8 +1,8 @@
 using System.Globalization;
-using TekDeq.Localization.Options;
-using TekDeq.Localization.Providers.Interfaces;
+using TekDeq.Localization.Core.Options;
+using TekDeq.Localization.Core.Providers.Interfaces;
 
-namespace TekDeq.Localization.Providers.Abstract;
+namespace TekDeq.Localization.Core.Providers.Abstract;
 
 public abstract class LocalizationProviderBase : ILocalizationProvider
 {

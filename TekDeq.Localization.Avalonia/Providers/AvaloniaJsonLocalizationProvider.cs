@@ -3,8 +3,8 @@ using System.Globalization;
 using Avalonia;
 using Avalonia.Platform;
 using TekDeq.Localization.Avalonia.Options;
-using TekDeq.Localization.Options;
-using TekDeq.Localization.Providers;
+using TekDeq.Localization.Core.Options;
+using TekDeq.Localization.Core.Providers;
 
 namespace TekDeq.Localization.Avalonia.Providers;
 

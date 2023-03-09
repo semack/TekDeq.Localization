@@ -1,5 +1,5 @@
 using System.Globalization;
-using TekDeq.Localization.Options;
+using TekDeq.Localization.Core.Options;
 
 namespace TekDeq.Localization.Avalonia.Options;
 

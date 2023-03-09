@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace TekDeq.Localization.Interfaces;
+namespace TekDeq.Localization.Core.Interfaces;
 
 public interface ILocalizer
 {

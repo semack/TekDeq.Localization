@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using ReactiveUI;
-using TekDeq.Localization.Interfaces;
+using TekDeq.Localization.Core.Interfaces;
 
 namespace TeqDeq.Avalonia.Sample.ViewModels;
 
