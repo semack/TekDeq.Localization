@@ -9,7 +9,7 @@
         <LangVersion>10</LangVersion>
         <Description>Localization Core library</Description>
         <PackageProjectUrl>https://github.com/semack/TekDeq.Localization</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/semack/TekDeq.Localization/blob/master/LICENSE.md</PackageLicenseUrl>
+        <License>https://github.com/semack/TekDeq.Localization/blob/master/LICENSE.md</License>
         <RepositoryUrl>https://github.com/semack/TekDeq.Localization</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>

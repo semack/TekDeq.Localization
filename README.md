@@ -1,4 +1,4 @@
-# TekDeq.Localization  
+# TekDeq.Localization [![Create and Publish Packages](https://github.com/semack/TekDeq.Localization/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/semack/TekDeq.Localization/actions/workflows/dotnet.yml)
 
 Yet another localization library with its own abstractions gives the possibility to 
 create localization infrastructure with examples.  It contains basic Json Localization 
@@ -8,19 +8,19 @@ Provider implementation (other types will be added in the future).
 ### Installation
 Before using the library, install following Nuget packages:
 
-- The core library contains required abstractions. [![Nuget](https://img.shields.io/nuget/v/TekDeq.Localization.Core)](https://www.nuget.org/packages/TekDeq.Localization.Core/)
-  [![Nuget](https://img.shields.io/nuget/dt/TekDeq.Localization.Core)](https://www.nuget.org/TekDeq.Localization.Core/)
+The core library contains required abstractions.
+<br />[![Nuget](https://img.shields.io/nuget/v/TekDeq.Localization.Core)](https://www.nuget.org/packages/TekDeq.Localization.Core/) [![Nuget](https://img.shields.io/nuget/dt/TekDeq.Localization.Core)](https://www.nuget.org/packages/TekDeq.Localization.Core/)
 ```
 Install-Package TekDeq.Localization.Core
 ```
-- Microsoft dependency injection extensions. [![Nuget](https://img.shields.io/nuget/v/TekDeq.Localization.Core)](https://www.nuget.org/packages/TekDeq.Localization.Core/)
-  [![Nuget](https://img.shields.io/nuget/dt/TekDeq.Localization.Core)](https://www.nuget.org/TekDeq.Localization.Core/)
+Microsoft dependency injection extensions.
+<br />[![Nuget](https://img.shields.io/nuget/v/TekDeq.Localization.DependencyInjection)](https://www.nuget.org/packages/TekDeq.Localization.DependencyInjection/) [![Nuget](https://img.shields.io/nuget/dt/TekDeq.Localization.DependencyInjection)](https://www.nuget.org/packages/TekDeq.Localization.DependencyInjection)
 ```
 Install-Package TekDeq.Localization.DependencyInjection
 ```
 
-- Localization provider and extensions for [Avalonia](https://avaloniaui.net/) [![Nuget](https://img.shields.io/nuget/v/Localization.Avalonia)](https://www.nuget.org/packages/Localization.Avalonia/)
-  [![Nuget](https://img.shields.io/nuget/dt/Localization.Avalonia)](https://www.nuget.org/Localization.Avalonia/)<br /> (Now it supports Json dictionaries only).
+[![Nuget](https://img.shields.io/nuget/v/TekDeq.Localization.Avalonia)](https://www.nuget.org/packages/TekDeq.Localization.Avalonia/) [![Nuget](https://img.shields.io/nuget/dt/TekDeq.Localization.Avalonia)](https://www.nuget.org/packages/TekDeq.Localization.Avalonia)
+<br /> Localization provider and extensions for [Avalonia](https://avaloniaui.net/) (now it supports Json dictionaries only).
 ```
 Install-Package TekDeq.Localization.Avalonia
 ```
