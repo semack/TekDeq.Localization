@@ -26,7 +26,7 @@ jobs:
       run: |
         dotnet restore
       
-    - name: Build & Publish
+    - name: Pack & Publish
       run: |
         dotnet pack TekDeq.Localization.sln --configuration Release --no-restore --output ./nupkgs --version-suffix .${{ github.run_number }}
    
