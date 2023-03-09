@@ -8,22 +8,11 @@ Provider implementation (other types will be added in the future).
 ### Installation
 Before using the library, install following Nuget packages:
 
-The core library contains required abstractions.
-<br />[![Nuget](https://img.shields.io/nuget/v/TekDeq.Localization.Core)](https://www.nuget.org/packages/TekDeq.Localization.Core/) [![Nuget](https://img.shields.io/nuget/dt/TekDeq.Localization.Core)](https://www.nuget.org/packages/TekDeq.Localization.Core/)
-```
-Install-Package TekDeq.Localization.Core
-```
-Microsoft dependency injection extensions.
-<br />[![Nuget](https://img.shields.io/nuget/v/TekDeq.Localization.DependencyInjection)](https://www.nuget.org/packages/TekDeq.Localization.DependencyInjection/) [![Nuget](https://img.shields.io/nuget/dt/TekDeq.Localization.DependencyInjection)](https://www.nuget.org/packages/TekDeq.Localization.DependencyInjection)
-```
-Install-Package TekDeq.Localization.DependencyInjection
-```
-
-[![Nuget](https://img.shields.io/nuget/v/TekDeq.Localization.Avalonia)](https://www.nuget.org/packages/TekDeq.Localization.Avalonia/) [![Nuget](https://img.shields.io/nuget/dt/TekDeq.Localization.Avalonia)](https://www.nuget.org/packages/TekDeq.Localization.Avalonia)
-<br /> Localization provider and extensions for [Avalonia](https://avaloniaui.net/) (now it supports Json dictionaries only).
-```
-Install-Package TekDeq.Localization.Avalonia
-```
+| Name | Description | Version |
+|:-|:-|:-|
+| [TekDeq.Localization.Core](https://img.shields.io/nuget/v/TekDeq.Localization.Core/) | Core library | ![Nuget](https://badgen.net/nuget/v/TekDeq.Localization.Core) | 
+| [TekDeq.Localization.DependencyInjection](https://www.nuget.org/packages/TekDeq.Localization.DependencyInjection/) | Microsoft DI extensions | ![Nuget](https://badgen.net/nuget/v/TekDeq.Localization.DependencyInjection) |
+| [TekDeq.Localization.Avalonia](https://www.nuget.org/packages/TekDeq.Localization.Avalonia/) | Avalonia Localization and Extensions | ![Nuget](https://badgen.net/nuget/v/TekDeq.Localization.Avalonia) |
 
 ## Using the library
 To create additional Localization Providers, please look at 
